@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEGOROWL-1 Terminal Synth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="synth-container">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="title">JEGOROWL-1</div>
+      <div class="subtitle">TERMINAL SYNTH</div>
+    </div>
+
+    <!-- DISPLAY + BUTTONS ROW -->
+    <div class="display-row">
+      <!-- OSCILLOSCOPE DISPLAY -->
+      <div class="ascii-display">
+        <div class="display-grid">
+          <div id="display-owl" class="owl">    ___
+    {0,0}
+    |)__)
+    -"-"-</div>
+          <div class="display-params">
+            <div class="param-line">NOTE: <span id="param-note">A4 (440 Hz)</span></div>
+            <div class="param-line">WAVE: <span id="param-wave">SINE</span></div>
+            <div class="param-line">FILT: <span id="param-filt">2000 Hz</span></div>
+            <div class="param-line">STAT: <span id="param-status">STOPPED</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="button-column">
+        <button class="btn" id="play-btn">▶ PLAY</button>
+        <button class="btn" id="feature-btn">MORE FEATURES</button>
+        <button class="btn learn-btn" id="learn-btn">
+          <span id="learn-indicator">[ ]</span> LEARN MODE
+        </button>
+      </div>
+    </div>
+
+    <!-- LEARN MODE MODAL -->
+    <div id="learn-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title" id="modal-title">PARAMETER</div>
+          <button class="modal-close" id="modal-close">[ESC]</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-section">
+            <div class="modal-section-title">Was macht das?</div>
+            <div class="modal-text" id="modal-what"></div>
+          </div>
+          <div class="modal-section">
+            <div class="modal-section-title">Wie funktioniert's?</div>
+            <div class="modal-text" id="modal-how"></div>
+          </div>
+          <div class="modal-section">
+            <div class="modal-section-title">Probier mal...</div>
+            <div class="modal-text" id="modal-tips"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTROL GROUPS -->
+    <div class="control-groups">
+      
+      <!-- TOP ROW: OSCILLATOR + FILTER -->
+      <div class="control-row">
+        <!-- OSCILLATOR GROUP -->
+        <div class="control-group">
+          <div class="group-title">OSCILLATOR</div>
+          <div class="controls">
+            <!-- Frequency Knob -->
+            <div class="control" data-param="freq">
+              <div class="control-label">FREQ</div>
+              <div class="knob-container">
+                <div class="knob" id="freq-knob" data-value="440"></div>
+              </div>
+              <div class="value-display" id="freq-value">440 Hz</div>
+            </div>
+
+            <!-- Wave Toggle Switch -->
+            <div class="control" data-param="wave">
+              <div class="control-label">WAVE</div>
+              <div class="toggle-container">
+                <div class="toggle-track">
+                  <div class="toggle-option active" data-wave="0">SIN</div>
+                  <div class="toggle-option" data-wave="1">SQR</div>
+                  <div class="toggle-option" data-wave="2">SAW</div>
+                  <div class="toggle-option" data-wave="3">TRI</div>
+                </div>
+              </div>
+              <div class="value-display" id="wave-value">SINE</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILTER GROUP -->
+        <div class="control-group">
+          <div class="group-title">FILTER</div>
+          <div class="controls">
+            <!-- Filter Cutoff -->
+            <div class="control" data-param="cutoff">
+              <div class="control-label">CUTOFF</div>
+              <div class="knob-container">
+                <div class="knob" id="cutoff-knob" data-value="2000"></div>
+              </div>
+              <div class="value-display" id="cutoff-value">2000 Hz</div>
+            </div>
+
+            <!-- Filter Resonance -->
+            <div class="control" data-param="resonance">
+              <div class="control-label">RESONANCE</div>
+              <div class="knob-container">
+                <div class="knob" id="resonance-knob" data-value="8"></div>
+              </div>
+              <div class="value-display" id="resonance-value">8.0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULATION GROUP -->
+      <div class="control-group">
+        <div class="group-title">MODULATION</div>
+        <div class="controls modulation-grid">
+          <!-- LFO Speed -->
+          <div class="control" data-param="lfo-speed">
+            <div class="control-label">LFO SPEED</div>
+            <div class="knob-container">
+              <div class="knob" id="lfo-speed-knob" data-value="2"></div>
+            </div>
+            <div class="value-display" id="lfo-speed-value">2.0 Hz</div>
+          </div>
+
+          <!-- LFO Depth -->
+          <div class="control" data-param="lfo-depth">
+            <div class="control-label">LFO DEPTH</div>
+            <div class="knob-container">
+              <div class="knob" id="lfo-depth-knob" data-value="0"></div>
+            </div>
+            <div class="value-display" id="lfo-depth-value">0%</div>
+          </div>
+
+          <!-- Attack -->
+          <div class="control" data-param="attack">
+            <div class="control-label">ATTACK</div>
+            <div class="knob-container">
+              <div class="knob" id="attack-knob" data-value="0.01"></div>
+            </div>
+            <div class="value-display" id="attack-value">0.01s</div>
+          </div>
+
+          <!-- Decay -->
+          <div class="control" data-param="decay">
+            <div class="control-label">DECAY</div>
+            <div class="knob-container">
+              <div class="knob" id="decay-knob" data-value="0.1"></div>
+            </div>
+            <div class="value-display" id="decay-value">0.10s</div>
+          </div>
+
+          <!-- Sustain -->
+          <div class="control" data-param="sustain">
+            <div class="control-label">SUSTAIN</div>
+            <div class="knob-container">
+              <div class="knob" id="sustain-knob" data-value="0.7"></div>
+            </div>
+            <div class="value-display" id="sustain-value">0.70</div>
+          </div>
+
+          <!-- Release -->
+          <div class="control" data-param="release">
+            <div class="control-label">RELEASE</div>
+            <div class="knob-container">
+              <div class="knob" id="release-knob" data-value="0.3"></div>
+            </div>
+            <div class="value-display" id="release-value">0.30s</div>
+          </div>
+
+          <!-- CHAOS (Highlighted) -->
+          <div class="control chaos" data-param="chaos">
+            <div class="control-label">CHAOS</div>
+            <div class="knob-container">
+              <div class="knob" id="chaos-knob" data-value="0"></div>
+            </div>
+            <div class="value-display" id="chaos-value">0%</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      JEGOROWL-1 v0.4 • NO WARRANTY
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

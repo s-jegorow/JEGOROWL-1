@@ -1,0 +1,78 @@
+{
+  "freq": {
+    "title": "FREQUENCY (Frequenz)",
+    "what": "Die Frequenz bestimmt die Tonhöhe - also ob der Ton tief oder hoch klingt. Je höher die Frequenz, desto höher der Ton.",
+    "how": "Sound besteht aus Schwingungen. Die Frequenz gibt an, wie oft pro Sekunde eine Welle schwingt (gemessen in Hertz/Hz). 440 Hz bedeutet 440 Schwingungen pro Sekunde - das ist der Kammerton A, den Orchester zum Stimmen nutzen.\n\nNiedrige Frequenzen (110-220 Hz) klingen tief und basslastig. Hohe Frequenzen (660-880 Hz) klingen hell und schrill. Unser Synth deckt etwa zwei Oktaven ab.",
+    "tips": "PROBIER MAL: Starte bei 220 Hz (tiefer Ton) und dreh langsam nach rechts. Du hörst, wie der Ton immer höher wird!\n\nFUN FACT: Menschen können Frequenzen von etwa 20 Hz bis 20.000 Hz hören. Hunde hören sogar bis 45.000 Hz!"
+  },
+  
+  "wave": {
+    "title": "WAVEFORM (Wellenform)",
+    "what": "Die Wellenform bestimmt die Klangfarbe - also ob der Ton weich, scharf, warm oder metallisch klingt. Jede Wellenform hat ihren eigenen Charakter.",
+    "how": "Ein Oszillator erzeugt elektrische Schwingungen. Die Form dieser Schwingung bestimmt, welche Obertöne (zusätzliche Frequenzen) im Sound enthalten sind:\n\nSINE (Sinus): Nur der Grundton, keine Obertöne. Klingt sehr rein und weich, wie eine Flöte oder ein reiner Pfiff.\n\nSQUARE (Rechteck): Enthält ungerade Obertöne (3., 5., 7. etc.). Klingt hohl und nasalnd, wie eine Klarinette oder alte Videospiel-Sounds.\n\nSAW (Sägezahn): Enthält ALLE Obertöne. Klingt sehr voll, scharf und reich - perfekt für fette Synthie-Leads und Bässe.\n\nTRI (Dreieck): Ähnlich wie Sine, aber mit wenigen sanften Obertönen. Klingt weicher als Square, aber voller als Sine.",
+    "tips": "PROBIER MAL: Wechsle zwischen den Wellenformen während der Ton läuft. Hörst du den Unterschied?\n\nSINE = sanft | SQUARE = hohl | SAW = scharf | TRI = warm\n\nFür Bass-Sounds: SAW oder SQUARE\nFür Pads/Flächen: SINE oder TRI\nFür Leads: SAW"
+  },
+  
+  "cutoff": {
+    "title": "FILTER CUTOFF (Grenzfrequenz)",
+    "what": "Der Cutoff ist wie ein Tonregler an einer Stereoanlage. Er entscheidet, wie hell oder dumpf der Sound klingt, indem er bestimmte Frequenzen durchlässt oder blockiert.",
+    "how": "Unser Synth hat einen Lowpass-Filter. 'Lowpass' bedeutet: Tiefe Frequenzen ('low') werden durchgelassen ('pass'), hohe Frequenzen werden abgeschnitten.\n\nDer Cutoff-Wert (200-5000 Hz) ist die Grenzfrequenz. Alles unterhalb kommt durch, alles oberhalb wird leiser gemacht.\n\nNiedriger Cutoff (200-500 Hz): Nur ganz tiefe Töne kommen durch. Der Sound wird dumpf, warm, wie wenn du durch eine geschlossene Tür hörst. Perfekt für dunkle Bass-Sounds.\n\nHoher Cutoff (3000-5000 Hz): Fast alle Frequenzen kommen durch. Der Sound bleibt hell, klar und durchsetzungsfähig.\n\nMittlerer Cutoff (800-1500 Hz): Sweet Spot für viele Sounds - nicht zu dumpf, nicht zu schrill.",
+    "tips": "PROBIER MAL: Starte mit Cutoff ganz rechts (5000 Hz). Dreh dann langsam nach links während der Ton läuft. Du hörst, wie der Sound immer dumpfer wird - als würdest du eine Decke über die Lautsprecher legen!\n\nKombiniere mit RESONANCE für klassische Synth-Sweeps!\n\nTIPP: Bei SAW-Welle + niedrigem Cutoff = fetter Bass"
+  },
+  
+  "resonance": {
+    "title": "FILTER RESONANCE (Resonanz / Q-Faktor)",
+    "what": "Resonanz verstärkt die Frequenzen direkt am Cutoff-Punkt. Das gibt dem Sound mehr Charakter, Schärfe und kann ihn 'quäkend' oder 'singend' machen.",
+    "how": "Der Filter schneidet nicht abrupt ab, sondern hat eine Kurve. Resonanz (auch 'Q' genannt) bestimmt, wie steil diese Kurve ist.\n\nNiedrige Resonanz (0.1-3): Sanfter Übergang. Der Filter arbeitet subtil und natürlich.\n\nMittlere Resonanz (5-10): Die Frequenzen am Cutoff-Punkt werden betont. Der Sound bekommt einen nasalen, charakteristischen Klang.\n\nHohe Resonanz (15-20): Sehr starke Betonung! Der Filter kann anfangen zu 'singen' oder 'pfeifen' - die Resonanz selbst wird zum Teil des Sounds. Bei sehr hohen Werten kann der Filter sogar selbst oszillieren und einen Ton erzeugen!\n\nResonanz + sich bewegender Cutoff = der klassische 'Filter-Sweep' Sound, den du aus Techno und House kennst.",
+    "tips": "PROBIER MAL:\n1. Stelle Resonance auf 15\n2. Bewege den Cutoff langsam von links nach rechts\n3. Hörst du das 'Wauuuw'? Das ist der klassische Synth-Sound!\n\nVORSICHT: Bei sehr hoher Resonanz (18+) kann es LAUT werden!\n\nFür subtile Sounds: Resonanz 3-7\nFür dramatische Effekte: Resonanz 12+"
+  },
+  
+  "lfo-speed": {
+    "title": "LFO SPEED (Modulationsgeschwindigkeit)",
+    "what": "LFO steht für 'Low Frequency Oscillator' - ein langsamer Oszillator, der andere Parameter automatisch auf und ab bewegt. Speed bestimmt, wie schnell diese Bewegung ist.",
+    "how": "Ein normaler Oszillator schwingt sehr schnell (100-1000 Hz) und erzeugt hörbare Töne. Ein LFO schwingt langsam (0.1-10 Hz) und ist nicht hörbar - aber er kann andere Parameter modulieren!\n\nIn unserem Synth bewegt der LFO den Filter Cutoff automatisch rauf und runter. Das erzeugt einen pulsierenden, lebendigen Sound.\n\nLangsamer LFO (0.1-1 Hz): Sanfte, meditative Bewegung. Der Cutoff öffnet und schließt sich langsam. Gut für Ambient und Pads.\n\nMittlerer LFO (2-4 Hz): Rhythmische Bewegung, fast tanzbar. Passt oft zum Tempo von Musik.\n\nSchneller LFO (6-10 Hz): Nervöse, zitternde Bewegung. Kann robotisch oder aggressiv klingen.",
+    "tips": "PROBIER MAL:\n1. Stelle LFO DEPTH auf 50%\n2. Variiere LFO SPEED von langsam (1 Hz) zu schnell (8 Hz)\n3. Hörst du, wie der Sound 'atmet' oder 'pulsiert'?\n\nKombination: SAW-Welle + LFO Speed 4 Hz + LFO Depth 70% = klassischer Trance-Sound!\n\nBEI 0.5 Hz oder langsamer kannst du die einzelnen Bewegungen gut zählen."
+  },
+  
+  "lfo-depth": {
+    "title": "LFO DEPTH (Modulationsintensität)",
+    "what": "LFO Depth bestimmt, wie stark der LFO den Filter Cutoff bewegt - also wie intensiv der pulsierende Effekt ist.",
+    "how": "Der LFO bewegt den Cutoff automatisch rauf und runter. Depth sagt ihm, wie weit er sich bewegen soll:\n\n0% Depth: LFO ist deaktiviert. Der Cutoff bleibt an der Position, die du eingestellt hast.\n\n25% Depth: Subtile Bewegung. Der Sound 'atmet' leicht, aber bleibt weitgehend stabil.\n\n50% Depth: Deutliche Bewegung. Der pulsierende Effekt ist klar hörbar.\n\n100% Depth: Maximale Bewegung! Der Cutoff bewegt sich über seinen gesamten Bereich. Der Sound kann von ganz dumpf bis ganz hell schwingen.\n\nDie Kombination aus Speed (Geschwindigkeit) und Depth (Intensität) bestimmt den Charakter der Modulation.",
+    "tips": "PROBIER MAL:\n1. Stelle Cutoff auf 1500 Hz (Mitte)\n2. LFO Speed auf 3 Hz\n3. Bewege LFO Depth langsam von 0% zu 100%\n4. Hörst du, wie der Effekt immer dramatischer wird?\n\nFÜR SUBTILE EFFEKTE: Depth 10-30%\nFÜR RHYTHMISCHE SOUNDS: Depth 50-70%\nFÜR EXTREME SWEEPS: Depth 90-100%\n\nTIPP: Bei hohem Depth + hoher Resonanz = sehr intensiver Effekt!"
+  },
+  
+  "attack": {
+    "title": "ATTACK (Anschlagzeit)",
+    "what": "Attack bestimmt, wie schnell der Ton seine volle Lautstärke erreicht, nachdem du PLAY drückst. Ist es sofort da oder 'faded' es langsam ein?",
+    "how": "ADSR ist eine 'Envelope' (Hüllkurve), die die Lautstärke über die Zeit steuert. Attack ist die erste Phase:\n\nKurzer Attack (0.001-0.05s): Der Ton kommt SOFORT auf volle Lautstärke. Klingt percussive und direkt, wie ein Klavier oder Schlagzeug.\n\nMittlerer Attack (0.1-0.5s): Der Ton 'schwillt an'. Klingt weicher, aber immer noch reaktiv.\n\nLanger Attack (1-2s): Der Ton faded sehr langsam ein, wie ein Streicher-Einsatz oder ein Synthie-Pad. Sehr atmosphärisch und cinematisch.\n\nDie Attack-Zeit läuft ab, dann kommt die nächste Phase: Decay.",
+    "tips": "PROBIER MAL verschiedene Attack-Zeiten:\n\n0.01s = Percussive (wie Piano oder Bass-Drum)\n0.3s = Smooth (wie Synthesizer-Pad)\n1.5s = Cinematic (wie Streicher-Sektion)\n\nKombination: Langer Attack + SAW-Welle = epische Flächen\nKombination: Kurzer Attack + SQUARE = Bass-Sounds\n\nACHTUNG: Bei sehr langem Attack dauert es, bis du was hörst!"
+  },
+  
+  "decay": {
+    "title": "DECAY (Abklingzeit)",
+    "what": "Decay bestimmt, wie schnell der Ton nach dem Attack-Peak zum Sustain-Level abfällt. Es ist das 'Ausklingen' nach dem initialen Anschlag.",
+    "how": "Nach dem Attack ist der Ton auf voller Lautstärke. Jetzt kommt Decay:\n\nKurzer Decay (0.01-0.1s): Der Ton fällt schnell zum Sustain-Level. Gibt dem Sound einen 'Pluck' oder 'Punch' am Anfang.\n\nMittlerer Decay (0.2-0.5s): Sanfter Übergang. Der Ton klingt natürlicher.\n\nLanger Decay (1-2s): Der Ton 'schwingt aus'. Das verlängert den Anfang des Sounds und macht ihn weicher.\n\nDer Decay endet beim Sustain-Level. Wenn Sustain bei 0.7 steht, fällt der Decay von 1.0 (voll) auf 0.7.\n\nBei Sustain 0 (null) ist Decay quasi die gesamte Dauer des Tons - dann hat man einen klassischen 'Pluck'-Sound.",
+    "tips": "PROBIER MAL:\n1. Stelle Sustain auf 0.0\n2. Variiere Decay von 0.05s bis 2s\n3. Jetzt ist Decay die gesamte Ton-Dauer! Hörst du den Unterschied?\n\nKurzer Decay + Sustain 0 = percussive Sounds (Drums)\nLanger Decay + hoher Sustain = natürliche Instrumente\n\nKombination: Attack 0.01s + Decay 0.2s + Sustain 0 = Pluck/Zupf-Sound"
+  },
+  
+  "sustain": {
+    "title": "SUSTAIN (Haltelautstärke)",
+    "what": "Sustain ist die Lautstärke, die der Ton hält, nachdem Attack und Decay abgelaufen sind - solange PLAY gedrückt bleibt (bzw. der Ton spielt).",
+    "how": "Sustain ist anders als die anderen ADSR-Parameter: Es ist keine Zeit, sondern ein Lautstärke-Level (0.0 bis 1.0).\n\nNach Attack (Ton schwingt an) und Decay (Ton fällt ab) bleibt der Ton beim Sustain-Level:\n\nSustain 0.0: Kein Halten. Der Ton klingt nach dem Decay komplett aus. Gut für kurze, percussive Sounds.\n\nSustain 0.5: Mittlere Lautstärke. Der Ton bleibt hörbar, aber nicht auf voller Lautstärke.\n\nSustain 1.0: Volle Lautstärke! Der Ton bleibt nach Attack und Decay auf Maximum. Klassisch für Orgel-Sounds oder gehaltene Noten.\n\nDas Sustain-Level wird gehalten bis du STOP drückst, dann kommt Release.",
+    "tips": "PROBIER MAL:\n\nSustain 0.0 + kurzer Decay = Pluck-Sounds (Gitarre, Harfe)\nSustain 0.7 + mittlerer Decay = natürliche Instrumente\nSustain 1.0 + kurzer Attack/Decay = Orgel, gehaltene Noten\n\nVerstehe den Unterschied:\nDECAY = Zeit bis Sustain-Level erreicht wird\nSUSTAIN = Lautstärke die gehalten wird\nRELEASE = Zeit bis Stille nach STOP\n\nTIPP: Stelle alle ADSR-Werte mal auf Maximum und variiere dann nur Sustain zwischen 0 und 1!"
+  },
+  
+  "release": {
+    "title": "RELEASE (Ausklingzeit)",
+    "what": "Release bestimmt, wie lange der Ton braucht um zu verstummen, nachdem du STOP drückst. Ist es sofort still oder klingt es sanft aus?",
+    "how": "Release ist die letzte Phase der ADSR-Envelope. Sie startet, wenn du STOP drückst:\n\nKurzer Release (0.01-0.1s): Der Ton stoppt fast sofort. Gut für präzise, staccato-artige Sounds oder wenn du schnelle Rhythmen spielen willst.\n\nMittlerer Release (0.3-0.8s): Der Ton klingt natürlich aus, wie wenn ein Pianist die Taste loslässt.\n\nLanger Release (1-3s): Der Ton faded sehr langsam aus, auch nachdem STOP gedrückt wurde. Klingt flächig, atmosphärisch und verbindet Noten ineinander.\n\nBei einem Release von 2 Sekunden hörst du den Ton also noch 2 Sekunden NACH dem Stoppen!",
+    "tips": "PROBIER MAL:\n1. Drücke PLAY für 1 Sekunde\n2. Drücke STOP\n3. Variiere Release von 0.1s bis 3s\n4. Hörst du, wie lange der Ton nachklingt?\n\nKurzer Release (0.1s) = abgehackte Sounds\nMittlerer Release (0.5s) = natürliches Ausschwingen\nLanger Release (2s+) = cinematische Trails\n\nTIPP: Bei Soundscapes und Ambient: Release auf 2-3s für verschmolzene Klänge!\n\nKombination: Langer Attack + Langer Release = endlose Flächen"
+  },
+  
+  "chaos": {
+    "title": "~~ CHAOS ~~ (Zufallsmodulation)",
+    "what": "Chaos fügt dem Ton Unvorhersehbarkeit hinzu. Die Tonhöhe schwankt zufällig und erzeugt instabile, lebendige, manchmal auch kaputte Sounds.",
+    "how": "Normalerweise ist ein Synthesizer perfekt stabil - die Frequenz bleibt exakt gleich. Chaos macht das Gegenteil:\n\nJede 100 Millisekunden wird die Frequenz leicht zufällig verändert. Die Chaos-Level bestimmt, wie stark diese Abweichung ist:\n\n0% Chaos: Keine Abweichung. Perfekt stabiler Ton.\n\n25% Chaos: Subtile Schwankungen. Der Ton klingt lebendiger, analoger, wie alte Hardware-Synths die leicht 'driften'.\n\n50% Chaos: Deutliche Schwankungen. Der Ton wird instabil und nervös.\n\n75% Chaos: Starke Schwankungen. Der Ton 'wabbelt' und klingt kaputt oder betrunken.\n\n100% Chaos: Maximale Zufälligkeit! Die Tonhöhe springt wild umher. Kann glitchy, experimentell oder auch völlig unmusikalisch klingen.\n\nChaos kann gezielt für experimentelle Musik, Sounddesign oder 'Happy Accidents' genutzt werden.",
+    "tips": "PROBIER MAL:\n\n10-20% Chaos = analoger 'Vintage'-Charakter\n40-60% Chaos = Lo-Fi / Broken / Glitch-Sounds\n80-100% Chaos = experimenteller Noise / Soundart\n\nKombination: SINE + 15% Chaos = warmer, lebendiger Ton\nKombination: SAW + 70% Chaos = aggressive Glitch-Musik\n\nFUN FACT: Viele klassische Analog-Synthesizer hatten ungewollt etwa 5-10% Chaos durch elektronische Instabilität. Manche Musiker lieben genau diese 'Imperfection'!\n\nWARNUNG: Bei sehr hohem Chaos kann es schrill oder unangenehm werden!"
+  }
+}
