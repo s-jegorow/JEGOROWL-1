@@ -68,7 +68,7 @@ JEGOROWL-1 is a monophonic synthesizer that runs entirely in the browser.
 - Initial prototype
 - Simple sine wave generator
 
-## 🛠️ Future Features
+## Future Features
 
 ### Planned
 - Preset system (save/load favorite sounds)
