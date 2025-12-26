@@ -3,13 +3,13 @@
 A web-based synthesizer with retro terminal aesthetics and interactive learning mode. Mainly focused on learning how to create sounds, will be part of a bigger music related project.
 
 
-## 🎵 Overview
+## Overview
 
 JEGOROWL-1 is a monophonic synthesizer that runs entirely in the browser. 
 
 **Special Feature:** The integrated **Learn Mode** makes sound synthesis understandable. Every parameter can be clicked to reveal detailed explanations - perfect for beginners!
 
-## ✨ Features
+## Features
 
 ### Audio Engine
 - **Oscillator** with 4 waveforms (Sine, Square, Sawtooth, Triangle)
@@ -43,7 +43,7 @@ JEGOROWL-1 is a monophonic synthesizer that runs entirely in the browser.
 
 
 
-## 📝 Changelog
+## Versions
 
 ### v0.4 (Current)
 - Added Learn Mode with detailed parameter explanations
