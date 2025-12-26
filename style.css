@@ -1,6 +1,4 @@
-/* ==========================================
-   GLOBAL STYLES
-   ========================================== */
+/* global styles */
 * {
   margin: 0;
   padding: 0;
@@ -19,9 +17,6 @@ body {
   overflow-y: auto;
 }
 
-/* ==========================================
-   MAIN CONTAINER
-   ========================================== */
 .synth-container {
   background: #1a1a1a;
   border: 3px solid #00ff41;
@@ -34,9 +29,6 @@ body {
   width: 100%;
 }
 
-/* ==========================================
-   HEADER
-   ========================================== */
 .header {
   text-align: center;
   margin-bottom: 20px;
@@ -64,9 +56,6 @@ body {
   letter-spacing: 2px;
 }
 
-/* ==========================================
-   DISPLAY + BUTTONS ROW
-   ========================================== */
 .display-row {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -75,9 +64,6 @@ body {
   align-items: center;
 }
 
-/* ==========================================
-   OSCILLOSCOPE DISPLAY (Green CRT Style)
-   ========================================== */
 .ascii-display {
   background: #000;
   color: #00ff41;
@@ -97,14 +83,11 @@ body {
   justify-content: center;
 }
 
-/* CRT scanline effect */
+/* crt scanline effect */
 .ascii-display::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: linear-gradient(
     transparent 50%,
     rgba(0, 255, 65, 0.03) 50%
@@ -119,9 +102,8 @@ body {
   100% { transform: translateY(100%); }
 }
 
-/* Display Layout - 2 columns centered */
 .display-grid {
-  display: none; /* Hidden initially for boot sequence */
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -135,7 +117,6 @@ body {
   display: flex;
 }
 
-/* Owl */
 .owl {
   text-align: center;
   white-space: pre;
@@ -145,7 +126,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Parameter Display */
 .display-params {
   font-size: 14px;
   line-height: 1.6;
@@ -167,9 +147,6 @@ body {
   text-shadow: 0 0 5px rgba(0, 255, 65, 0.8);
 }
 
-/* ==========================================
-   CONTROL GROUPS LAYOUT
-   ========================================== */
 .control-groups {
   display: flex;
   flex-direction: column;
@@ -177,7 +154,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Horizontal row for Oscillator + Filter */
 .control-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -206,7 +182,6 @@ body {
   gap: 18px;
 }
 
-/* Modulation grid - wider for more controls */
 .modulation-grid {
   grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
   gap: 15px;
@@ -223,9 +198,6 @@ body {
   opacity: 0.7;
 }
 
-/* ==========================================
-   KNOBS (Rotary Controls)
-   ========================================== */
 .knob-container {
   position: relative;
   width: 55px;
@@ -253,7 +225,6 @@ body {
     inset 0 0 15px rgba(0, 255, 65, 0.2);
 }
 
-/* Knob indicator line */
 .knob::after {
   content: '';
   position: absolute;
@@ -272,9 +243,6 @@ body {
   opacity: 0.8;
 }
 
-/* ==========================================
-   WAVE TOGGLE SWITCH (3D Style)
-   ========================================== */
 .toggle-container {
   width: 100px;
   height: 50px;
@@ -323,10 +291,6 @@ body {
   border-color: #00ff41;
 }
 
-/* ==========================================
-   CHAOS CONTROL (Special Highlight)
-   ASCII decoration with yellow/orange theme
-   ========================================== */
 .control.chaos .control-label::before {
   content: '~~ ';
   color: #ffaa00;
@@ -370,9 +334,6 @@ body {
   color: #ffaa00;
 }
 
-/* ==========================================
-   BUTTONS
-   ========================================== */
 .button-column {
   display: flex;
   flex-direction: column;
@@ -426,7 +387,6 @@ body {
     inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Learn Mode Button */
 .learn-btn {
   font-size: 10px;
   padding: 10px 20px;
@@ -441,24 +401,14 @@ body {
   content: 'X';
 }
 
-/* Learn Mode Active - Cursor Change */
-body.learn-mode-active .control {
-  cursor: help !important;
-}
-
+body.learn-mode-active .control,
 body.learn-mode-active .knob {
   cursor: help !important;
 }
 
-/* ==========================================
-   LEARN MODE MODAL
-   ========================================== */
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
@@ -489,14 +439,11 @@ body.learn-mode-active .knob {
   position: relative;
 }
 
-/* CRT scanline effect on modal */
+/* scanline effect on modal */
 .modal-content::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: linear-gradient(
     transparent 50%,
     rgba(0, 255, 65, 0.02) 50%
@@ -571,7 +518,6 @@ body.learn-mode-active .knob {
   white-space: pre-line;
 }
 
-/* Custom scrollbar for modal */
 .modal-content::-webkit-scrollbar {
   width: 8px;
 }
@@ -589,9 +535,6 @@ body.learn-mode-active .knob {
   background: #00cc33;
 }
 
-/* ==========================================
-   FOOTER
-   ========================================== */
 .footer {
   text-align: center;
   margin-top: 20px;
@@ -602,23 +545,21 @@ body.learn-mode-active .knob {
   letter-spacing: 2px;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN
-   ========================================== */
+/* responsive stuff */
 @media (max-width: 900px) {
   .display-row {
     grid-template-columns: 1fr;
   }
-  
+
   .button-column {
     flex-direction: row;
     justify-content: center;
   }
-  
+
   .control-row {
     grid-template-columns: 1fr;
   }
-  
+
   .modulation-grid {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
@@ -628,8 +569,9 @@ body.learn-mode-active .knob {
   .synth-container {
     padding: 15px;
   }
-  
-  .controls, .modulation-grid {
+
+  .controls,
+  .modulation-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

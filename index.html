@@ -8,15 +8,12 @@
 </head>
 <body>
   <div class="synth-container">
-    <!-- HEADER -->
     <div class="header">
       <div class="title">JEGOROWL-1</div>
       <div class="subtitle">TERMINAL SYNTH</div>
     </div>
 
-    <!-- DISPLAY + BUTTONS ROW -->
     <div class="display-row">
-      <!-- OSCILLOSCOPE DISPLAY -->
       <div class="ascii-display">
         <div class="display-grid">
           <div id="display-owl" class="owl">    ___
@@ -32,7 +29,6 @@
         </div>
       </div>
 
-      <!-- BUTTONS -->
       <div class="button-column">
         <button class="btn" id="play-btn">▶ PLAY</button>
         <button class="btn" id="feature-btn">MORE FEATURES</button>
@@ -42,7 +38,6 @@
       </div>
     </div>
 
-    <!-- LEARN MODE MODAL -->
     <div id="learn-modal" class="modal hidden">
       <div class="modal-content">
         <div class="modal-header">
@@ -66,16 +61,11 @@
       </div>
     </div>
 
-    <!-- CONTROL GROUPS -->
     <div class="control-groups">
-      
-      <!-- TOP ROW: OSCILLATOR + FILTER -->
       <div class="control-row">
-        <!-- OSCILLATOR GROUP -->
         <div class="control-group">
           <div class="group-title">OSCILLATOR</div>
           <div class="controls">
-            <!-- Frequency Knob -->
             <div class="control" data-param="freq">
               <div class="control-label">FREQ</div>
               <div class="knob-container">
@@ -84,7 +74,6 @@
               <div class="value-display" id="freq-value">440 Hz</div>
             </div>
 
-            <!-- Wave Toggle Switch -->
             <div class="control" data-param="wave">
               <div class="control-label">WAVE</div>
               <div class="toggle-container">
@@ -100,11 +89,11 @@
           </div>
         </div>
 
-        <!-- FILTER GROUP -->
+    
         <div class="control-group">
           <div class="group-title">FILTER</div>
           <div class="controls">
-            <!-- Filter Cutoff -->
+      
             <div class="control" data-param="cutoff">
               <div class="control-label">CUTOFF</div>
               <div class="knob-container">
@@ -113,7 +102,6 @@
               <div class="value-display" id="cutoff-value">2000 Hz</div>
             </div>
 
-            <!-- Filter Resonance -->
             <div class="control" data-param="resonance">
               <div class="control-label">RESONANCE</div>
               <div class="knob-container">
@@ -125,11 +113,9 @@
         </div>
       </div>
 
-      <!-- MODULATION GROUP -->
       <div class="control-group">
         <div class="group-title">MODULATION</div>
         <div class="controls modulation-grid">
-          <!-- LFO Speed -->
           <div class="control" data-param="lfo-speed">
             <div class="control-label">LFO SPEED</div>
             <div class="knob-container">
@@ -138,7 +124,6 @@
             <div class="value-display" id="lfo-speed-value">2.0 Hz</div>
           </div>
 
-          <!-- LFO Depth -->
           <div class="control" data-param="lfo-depth">
             <div class="control-label">LFO DEPTH</div>
             <div class="knob-container">
@@ -147,7 +132,6 @@
             <div class="value-display" id="lfo-depth-value">0%</div>
           </div>
 
-          <!-- Attack -->
           <div class="control" data-param="attack">
             <div class="control-label">ATTACK</div>
             <div class="knob-container">
@@ -156,7 +140,6 @@
             <div class="value-display" id="attack-value">0.01s</div>
           </div>
 
-          <!-- Decay -->
           <div class="control" data-param="decay">
             <div class="control-label">DECAY</div>
             <div class="knob-container">
@@ -165,7 +148,6 @@
             <div class="value-display" id="decay-value">0.10s</div>
           </div>
 
-          <!-- Sustain -->
           <div class="control" data-param="sustain">
             <div class="control-label">SUSTAIN</div>
             <div class="knob-container">
@@ -174,7 +156,6 @@
             <div class="value-display" id="sustain-value">0.70</div>
           </div>
 
-          <!-- Release -->
           <div class="control" data-param="release">
             <div class="control-label">RELEASE</div>
             <div class="knob-container">
@@ -183,7 +164,6 @@
             <div class="value-display" id="release-value">0.30s</div>
           </div>
 
-          <!-- CHAOS (Highlighted) -->
           <div class="control chaos" data-param="chaos">
             <div class="control-label">CHAOS</div>
             <div class="knob-container">
@@ -193,7 +173,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="footer">
