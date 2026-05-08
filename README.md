@@ -1,13 +1,27 @@
-# JEGOROWL-1 Terminal Synth
+```
+╔══════════════════════════════════════════════════════╗
+║                                                      ║
+║         JEGOROWL-1 :: TERMINAL SYNTH v0.4            ║
+║                                                      ║
+║                      ___                             ║
+║                     (o,o)                            ║
+║                    ((   ))                           ║
+║                   --"-"-"-"--                        ║
+║                                                      ║
+║       [ MONOPHONIC · LEARN-MODE · WEB AUDIO ]        ║
+║                                                      ║
+╚══════════════════════════════════════════════════════╝
+```
 
-A web-based synthesizer with retro terminal aesthetics and interactive learning mode. Mainly focused on learning how to create sounds, will be part of a bigger music related project.
+A web-based synthesizer with retro terminal aesthetics and an interactive learning mode. Built around the idea of understanding sound synthesis by clicking on it. 
 
+> **Live:** [owl1.sebastianjegorow.de](https://owl1.sebastianjegorow.de) - JEGOROWL-1 plus music theory and a drum computer, all free in the browser. JEGOROWL-1 is the basic module of the suite.
 
 ## Overview
 
-JEGOROWL-1 is a monophonic synthesizer that runs entirely in the browser. 
+JEGOROWL-1 is a monophonic synthesizer that runs entirely in the browser.
 
-**Special Feature:** The integrated **Learn Mode** makes sound synthesis understandable. Every parameter can be clicked to reveal detailed explanations - perfect for beginners!
+**Special Feature:** The integrated **Learn Mode** makes sound synthesis understandable. Every parameter can be clicked to reveal detailed explanations - perfect for beginners.
 
 ## Features
 
@@ -22,8 +36,7 @@ JEGOROWL-1 is a monophonic synthesizer that runs entirely in the browser.
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, Edge)
-- No installation required!
-
+- No installation required
 
 ### Learn Mode
 
@@ -40,8 +53,6 @@ JEGOROWL-1 is a monophonic synthesizer that runs entirely in the browser.
 - vanilla JS
 - HTML
 - Web Audio API for synthesis
-
-
 
 ## Versions
 
@@ -84,11 +95,13 @@ JEGOROWL-1 is a monophonic synthesizer that runs entirely in the browser.
 
 MIT License - feel free to use this project for learning, modification, or integration into your own projects.
 
-**Made with 💚 and vintage terminal vibes**
+---
 
 ```
-    ___
-   {0,0}
-   |)__)
-   -"-"-
+   ___
+  (o,o)
+  |)__)
+  -"-"-
 ```
+
+*Made with terminal vibes. Base module of the [Owl1 suite](https://owl1.sebastianjegorow.de).*
