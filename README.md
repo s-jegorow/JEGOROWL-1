@@ -23,6 +23,7 @@ JEGOROWL-1 is a monophonic synthesizer that runs entirely in the browser.
 
 **Special Feature:** The integrated **Learn Mode** makes sound synthesis understandable. Every parameter can be clicked to reveal detailed explanations - perfect for beginners.
 
+![Alternativer Text](screenshot.png)
 ## Features
 
 ### Audio Engine
